@@ -6,13 +6,13 @@ section .data
 section .text
 
 _start:
-	mov eax, 0x4
-	mov ebx, 1
-	mov ecx, buf
-	mov edx, 12
-	int 0x80
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, buf
+	mov rdx, 12
+	syscall
 	
-	mov eax, 0x1
-	mov ebx, 0x0
-	int 0x80
+	mov rax, 60
+	mov rdi, 0x0
+	syscall
 
